@@ -1,0 +1,49 @@
+<mvc:View 
+    xmlns:mvc="sap.ui.core.mvc" 
+    xmlns="sap.m" 
+    controllerName="com.emc.fin.app.controller.View1">
+    
+    <Page title="View 1">
+        <headerContent>
+            <Button icon="sap-icon://action" press="onNext"></Button>
+        </headerContent>
+
+        <content>
+            <!-- Search Field for Filtering -->
+            <SearchField id="idSearch" search="onSearch" liveChange="onSearch"></SearchField>
+
+            <!-- List of Items bound to the model's '/fruits' path -->
+            <List id="idMyList" items="{/fruits}" selectionChange="onItemSelect" mode="MultiSelect" delete="onItemDelete">
+              <headerToolbar>
+                <Toolbar>
+                    <ToolbarSpacer/>
+                     <Button icon="sap-icon://delete" press="onItemDelete" tooltip= "Delete Selected Items "/>
+
+                </Toolbar>
+              </headerToolbar>
+                <items>
+                    <ObjectListItem
+                       
+
+                        intro="{type}"
+                        title="{name}"
+                        number="{price}"
+                        numberUnit="{currency}"
+                        icon="{imageURL}">
+                        
+                        <!-- Object Status with Correct State -->
+                        <firstStatus> 
+                            <ObjectStatus text="{status}" state="{path: 'status',formatter:'.formatter.getStatus'}"/>
+                        </firstStatus>
+                    </ObjectListItem>
+                </items>
+            </List>
+        </content>
+    </Page>
+
+</mvc:View>
+
+     
+
+
+         

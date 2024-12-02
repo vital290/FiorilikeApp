@@ -1,0 +1,9 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"  xmlns="sap.m"
+          controllerName="com.emc.fin.app.controller.Empty">
+
+          <Page title="Empty View">
+         <Image src="https://cdn.britannica.com/60/182360-050-CD8878D6/Avengers-Age-of-Ultron-Joss-Whedon.jpg"/>   
+          
+          </Page>
+            
+    </mvc:View>     
